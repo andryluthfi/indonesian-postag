@@ -28,9 +28,33 @@ while($temp = <IN>) {
         for($i = 0; $i < scalar @sentence;$i++) {
             @temparray = split(/\t/, $sentence[$i]); # Memecah antara kata dan tag dengan delimiter tertentu (\t)
 
-            # Case 1: Sudah ada tag
+            # Case 1: Sudah ada tag dari MWE -> mapping ke tagset yang kita miliki
             if(scalar @temparray > 1) {
-				print OUT $sentence[$i] . "\n";
+            	if($temparray[1] eq "noun"){
+            		$mappingTag = "\tNN";
+            	}
+            	elsif($temparray[1] eq "verb"){
+            		$mappingTag = "\tVB";
+            	}
+            	elsif($temparray[1] eq "adjective"){
+            		$mappingTag = "\tJJ";
+            	}
+            	elsif($temparray[1] eq "adverb"){
+            		$mappingTag = "\tRB";
+            	}
+            	elsif($temparray[1] eq "pronoun"){
+            		$mappingTag = "\tPR,PRP";
+            	}
+            	elsif($temparray[1] eq "numeric"){
+            		$mappingTag = "\tCD,OD";
+            	}
+            	elsif($temparray[1] eq "other"){
+            		$mappingTag = "";
+            	}
+            	else{
+            		$mappingTag = "";
+            	}
+				print OUT $temparray[0] . $mappingTag . "\n";
             }
 			
 			else {

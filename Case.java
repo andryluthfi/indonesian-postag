@@ -53,8 +53,10 @@ public class Case {
 
 	public boolean hasNextAmbigous() {
 		boolean hasNextAmbigous = this.current < this.ambigousIndeces.size();
+		// System.out.println(this.current + " < " + this.ambigousIndeces.size());
 		if(hasNextAmbigous) {
 			hasNextAmbigous &= this.ambigousIndeces.get(this.current).getValue() == null;
+			// System.out.println(" -current : " + this.current);
 			if(!hasNextAmbigous) {
 				this.nextAmbigous();
 				hasNextAmbigous |= this.hasNextAmbigous();

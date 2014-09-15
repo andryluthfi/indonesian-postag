@@ -73,16 +73,31 @@ public class Rules {
     private boolean isCompatible(String[] ambigousTags, List<Map.Entry<String, Premises>> tags) {
         boolean isCompatible = ambigousTags.length == tags.size();
         if (isCompatible) {
+			// System.out.println("[Compatible]");
+			// System.out.print("[]\t");
 	       	for (String ambigousTag : ambigousTags) {
 				boolean isFound = false;
 				for(Map.Entry<String, Premises> entry : tags) {
 					if(entry.getKey().equals(ambigousTag)) {
 						isFound = true;
+						// System.out.print("[found] " + ambigousTag + "=" + entry.getKey() + " , ");
 						break;
 					}
 				}
 				isCompatible &= isFound;
+				// System.out.print("\""+ambigousTag + "\", ");
+				 // System.out.println(ambigousTag + " is " + mapTags.containsKey(ambigousTag));
+		           //isCompatible &= mapTags.containsKey(ambigousTag);
 		       }
+			// System.out.println();
+			// System.out.print("[]\t");
+			// for(Map.Entry<String, Premises> entry : tags) {
+
+			// 	System.out.print("\""+entry.getKey() + "\", ");
+			// }
+			// System.out.println();
+			// System.out.println("result : " + isCompatible);
+			// System.out.println();
         }
 
         return isCompatible;

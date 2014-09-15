@@ -1,0 +1,60 @@
+#!/usr/local/bin/perl
+
+open(IN,"res-dictTag.txt");
+open(PARSERULE, "res-parserule.txt");
+open(OUT, ">res-resolved.txt");
+
+use Storable;
+
+@ambigousWord = @{retrieve('res-ambigousWord.ptg')};
+@parser = ();
+$line = 1;
+$iterate = 0;
+
+# Membaca hasil tagging dari MorphInd untuk kata-kata yang belum diberi tag
+while($temp = <PARSERULE>) {
+	chomp $temp;
+	push(@parser, $temp);
+}
+
+# Membaca data kalimat-kalimat yang akan diberi tag
+while($temp = <IN>) {
+	chomp $temp;
+	
+	# Case 1: New line
+	if($temp eq "") {
+		# print new line
+		print OUT "\n";
+	}
+	
+	else {
+		@temparray = split(/\t/, $temp); # Memecah antara kata dan tag dengan delimiter tertentu (\t)
+		
+		# Case 2: Sudah ada tag
+		if(scalar @temparray > 1) {
+			# Jika merupakan kata yang sebelumnya ambigu, maka gunakan hasil dari parse rule
+			if($line == $ambigousWord[$i]) {
+				#do tagging from rule disambiguation
+				print OUT $parser[$i] . "\n";
+				
+				if($i < scalar @ambigousWord) {
+					$i++;
+				}
+			}
+			else {
+				print OUT $temp . "\n";
+			}
+		}
+		
+		# Case 3: Belum ada tag
+		else {
+			# do tagging for unknown (X)
+			print OUT $temparray[0] . "\t" . "X" . "\n";
+		}
+	}
+	
+	$line++;
+}
+
+# Proses resolve selesai (hasil final tagging)
+print "[Resolver.pl] Resolved...\n";

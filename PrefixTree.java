@@ -20,13 +20,13 @@ public class PrefixTree {
 
     public static void main(String[] arguments) throws FileNotFoundException, IOException {
         PrefixTree tree = new PrefixTree();
-        if (isDebugMode) {
-            tree.log();
-        }
         //String lexical = list.trace(arguments.length >= 1 ? arguments[0] : "ulang kali");
         //System.out.println(lexical != null ? lexical : "Maaf tidak ditemukan dalam cache");
         File fileInput = new File(arguments.length >= 1 ? arguments[0] : "input.txt");
         isDebugMode = arguments.length >= 2 ? Boolean.parseBoolean(arguments[1]) : false;
+        if (isDebugMode) {
+            tree.log();
+        }
         if (fileInput.exists()) {
             BufferedReader reader = new BufferedReader(new FileReader(fileInput));
             String rawText = "";
@@ -34,13 +34,18 @@ public class PrefixTree {
             for (String x = reader.readLine(); x != null; x = reader.readLine()) {
                 rawText += x + "\n";
             }
-
-            rawText = rawText.replaceAll("(?<=[A-Za-z])(?=\\.|\\,|\\!|\\?|\'|\"|\\$)", " ");
-            rawText = rawText.replaceAll("(?<=\\.|\\,|\\!|\\?|\'|\"|\\$)(?=[A-Za-z])", " ");
+            rawText = rawText.replaceAll("[ ]+"," ");
+            rawText = rawText.replaceAll("(?<=.)(?=[\'\"])"," ");
+            rawText = rawText.replaceAll("(?<=[\'\"])(?=.)", " ");
+            rawText = rawText.replaceAll("([\\!\\?]+)"," $1 ");
+            rawText = rawText.replaceAll("([^0-9])([\\.\\,\\$]+)([0-9]+)","$1 $2 $3");
+            rawText = rawText.replaceAll("([0-9]+)([\\.\\,\\$]+)([^0-9])","$1 $2 $3");
+            rawText = rawText.replaceAll("(?<=[a-zA-Z])(?=[\\.\\,\\$]+)"," ");
+            rawText = rawText.replaceAll("(?<=[\\.\\,\\$]+)(?=[a-zA-Z])"," ");
 
             //regex penentu akhir sebuah konteks
             rawText = rawText.replaceAll("\n", "\n\n");
-            rawText = rawText.replaceAll(" ([.?!])", " $1\n");
+            rawText = rawText.replaceAll(" ([.?!]+)", " $1\n");
             //System.out.println(rawText);
             String[] rawTokens = rawText.split("\\s");
             List<String> compiled = new ArrayList<String>();
@@ -53,7 +58,7 @@ public class PrefixTree {
                 Map.Entry<Boolean, String> response = currentNode.expand(rawToken);
                 if (response.getKey().booleanValue()) {
                     currentNode = currentNode.traverse(rawToken);
-                    debug = "-Expandable";
+                    debug = "-Expandable | Current phrase \"" +phrase+"\" ? \""+(phrase + " " + rawToken)+"\"" ;
                     phrase = phrase.equals("") ? rawToken : phrase + " " + rawToken;
                     if (response.getValue() != null) {
                         bestCandidate = new HashMap.SimpleEntry<String, String>(phrase, response.getValue());
@@ -64,11 +69,21 @@ public class PrefixTree {
                         String compile = bestCandidate.getKey() + "\t" + bestCandidate.getValue();
                         debug = "-Restart | Compile : " + compile;
                         compiled.add(compile);
-                        compiled.add(rawToken);
+                        if (tree.root.expand(rawToken).getKey().booleanValue()) {
+                        	if(currentNode.expand(rawToken).getKey().booleanValue()) {
+	                            currentNode = tree.root;
+	                            phrase = "";
+	                            index--;
+	                            continue;
+	                        }
+                        } else {
+                        	compiled.add(rawToken);
+                        }
                     } else {
+                        //System.out.println(rawToken + " --> " + phrase);
                         // mustinya bisa digabung ke bawah ini, secara konsep mereka sama
                         if (!phrase.equals("")) {
-                            for (String storedToken : phrase.split(" ")) {
+                            for (String storedToken : phrase.trim().split(" ")) {
                                 compiled.add(storedToken);
                             }
                         }
@@ -92,6 +107,17 @@ public class PrefixTree {
                 }
             }
 
+            // kasus di akhir itu MWE
+			if (bestCandidate != null) {
+        		String compile = bestCandidate.getKey() + "\t" + bestCandidate.getValue();
+                compiled.add(compile);
+        	} else if (!phrase.equals("")) {
+				// kasus di akhir bukan MWE
+                for (String storedToken : phrase.trim().split(" ")) {
+                    compiled.add(storedToken);
+                }
+            }
+
             for (String instance : compiled) {
                 System.out.println(instance);
             }
@@ -108,7 +134,7 @@ public class PrefixTree {
     }
 
     public void cache() throws FileNotFoundException {
-        Scanner scanner = new Scanner(new File("./resources/lemma-MWE-root-filtered.tsv"));
+        Scanner scanner = new Scanner(new File("./resources/lemma-MWE-compiled.tsv"));
         while (scanner.hasNextLine()) {
             String[] columns = scanner.nextLine().split("\t");
             this.root.entry(columns[0].substring(1, columns[0].length() - 1), columns[1]);
@@ -192,9 +218,10 @@ class NodeMWE {
     public Map.Entry<Boolean, String> expand(String token) {
         boolean isExpandable = false;
         String lexical = null;
-        isExpandable = this.branches.containsKey(token);
+        String key = token != null ? token.toLowerCase() : null;
+        isExpandable = this.branches.containsKey(key);
         if (isExpandable) {
-            NodeMWE descendant = this.branches.get(token);
+            NodeMWE descendant = this.branches.get(key);
             if (descendant.lexical != null) {
                 lexical = descendant.lexical;
             }
@@ -204,7 +231,7 @@ class NodeMWE {
     }
 
     public NodeMWE traverse(String token) {
-        return this.branches.get(token);
+        return this.branches.get(token.toLowerCase());
     }
 
     public void log() {
