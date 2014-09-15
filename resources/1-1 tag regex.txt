@@ -1,0 +1,4 @@
+#seper(satu|dua|tiga|empat|lima|enam|tujuh|delapan|sembilan)	CD
+#ke(satu|dua|tiga|empat|lima|enam|tujuh|delapan|sembilan)	CD,OD
+ke\-[0-9]+	CD,OD
+[0-9]+	CD

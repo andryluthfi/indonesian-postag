@@ -1,0 +1,2 @@
+del res-*
+cls

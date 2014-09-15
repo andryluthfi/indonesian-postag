@@ -1,0 +1,119 @@
+<?xml version = "1.0" encoding = "UTF-8" ?>
+<rules>
+
+    <!-- dummy rules -->
+    <!-- 
+    <rule id="dummy-1" tags="NN/NND/NNP/SYM">
+        <premise grammar="+2:NN" output="SYM"/>
+        <premise grammar="-1:NN" output="NNP"/>
+    </rule>
+    <rule id="dummy-2" tags="NNP/SYM">
+        <premise grammar="-3:VB" output="NN"/>
+    </rule>
+    -->
+    <!-- real rules -->
+    <rule id="rule-1" tags="WH/SC">
+        <premise grammar="$0=?" output="WH"/>
+        <premise grammar="-1:IN" output="WH"/>
+        <premise grammar="-1:SC" output="WH"/>
+        <premise grammar="-1:CC" output="WH"/>
+        <premise grammar="+1:IN" output="WH"/>
+        <premise grammar="+1:SC" output="WH"/>
+        <premise grammar="+1:CC" output="WH"/>
+        <premise grammar="+1=." output="WH"/>
+        <premise grammar="+1=," output="WH"/>
+        <premise grammar="+1=!" output="WH"/>
+        <premise grammar="+1=yang" output="WH"/>
+        <premise grammar="+1=pun" output="WH"/>
+        <premise grammar="$0=." output="SC"/>
+        <premise grammar="$0=!" output="SC"/>
+        <premise output="WH,SC"/>
+    </rule>
+	<rule id="rule-2" tags="NN/IN">
+        <premise grammar="-1:IN" output="NN"/>
+        <premise output="IN"/>
+    </rule>
+    <rule id="rule-3" tags="OD/CD">
+        <premise grammar="+1:NN" output="CD"/>
+        <premise grammar="-1:NN" output="OD"/>
+        <premise grammar="+1=," output="OD"/>
+        <premise output="OD,CD"/>
+    </rule>
+    <rule id="rule-4" tags="NN/NND">
+        <premise grammar="-1:CD and +1:NN" output="NND"/>
+        <premise grammar="-2:NN and -1:CD" output="NND"/>
+        <premise output="NN"/>
+    </rule>
+    <rule id="rule-5" tags="IN/CC">
+        <premise grammar="+1:NN" output="NN"/>
+        <premise output="CC"/>
+    </rule>
+    <!-- kemudian -->
+    <rule id="rule-6" tags="CC/NN">
+        <premise grammar="+1=." output="NN"/>
+        <premise output="CC,NN"/>
+    </rule>
+    <!-- lagi -->
+    <rule id="rule-7" tags="CC/RB/MD">
+        <premise grammar="-1:JJ and +1:JJ" output="CC"/>
+        <premise output="CC"/>
+    </rule>
+    <!-- masing-masing -->
+    <rule id="rule-8" tags="CD/PRP">
+        <premise grammar="+1:NN" output="CD"/>
+        <premise output="PRP"/>
+    </rule>
+    <!-- sekitar -->
+    <rule id="rule-9" tags="IN/RB/NN">
+        <premise grammar="-1:IN and +1:NN" output="NN"/>
+        <premise grammar="+1:SYM and +1:CD" output="RB"/>
+        <premise grammar="+1:CD" output="RB"/>
+        <premise grammar="+1:NN" output="IN"/>
+        <premise output="IN,RB,NN"/>
+    </rule>
+    <!-- sedang -->
+    <rule id="rule-10" tags="JJ/CC/MD">
+        <premise grammar="+1=." output="JJ"/>
+        <premise output="JJ,CC,MD"/>
+    </rule>
+    <!-- bakal & tengah -->
+    <rule id="rule-11" tags="MD/NN">
+        <premise grammar="+1:NN" output="NN"/>
+        <premise grammar="+1:VB" output="MD"/>
+        <premise grammar="+1:JJ" output="MD"/>
+        <premise grammar="-1:IN and +1:NN" output="NN"/>
+        <premise output="MD,NN"/>
+    </rule>
+    <!-- mikro -->
+    <rule id="rule-12" tags="NND/JJ">
+        <premise grammar="-1:CD" output="NND"/>
+        <premise grammar="-1=berapa" output="NND"/>
+        <premise grammar="-1=Berapa" output="NND"/>
+        <premise output="NND,JJ"/>
+    </rule>
+    <!-- belah, potong, pasang, sikat -->
+    <rule id="rule-13" tags="NND/VB/NN">
+        <premise grammar="-1:CD and +1:NN" output="NND"/>
+        <premise output="NND,VB,NN"/>
+    </rule>
+    <!-- minggu -->
+    <rule id="rule-14" tags="NNP/NN">
+        <premise grammar="+1=pagi" output="NNP"/>
+        <premise grammar="+1=siang" output="NNP"/>
+        <premise grammar="+1=sore" output="NNP"/>
+        <premise grammar="+1=petang" output="NNP"/>
+        <premise grammar="+1=malam" output="NNP"/>
+        <premise output="NNP,NN"/>
+    </rule>
+    <!-- begitu -->
+    <rule id="rule-15" tags="SC/PR/RB">
+        <premise grammar="+1:JJ" output="RB"/>
+        <premise grammar="+1=." output="PR"/>
+        <premise grammar="+1=saja" output="PR"/>
+        <premise grammar="+1=juga" output="PR"/>
+        <premise grammar="+1=pula" output="PR"/>
+        <premise grammar="+1=pun" output="PR"/>
+        <premise output="NND,VB,NN"/>
+    </rule>
+
+</rules>

@@ -1,0 +1,5 @@
+load /home/andryluthfi/Projects/DRPM-Postagger/Source Codes/DRPM-POSTagger/bin-files/morphind.bin
+apply up aaa
+echo #SENTINEL#
+apply up majalah
+echo #SENTINEL#

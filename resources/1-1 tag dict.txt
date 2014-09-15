@@ -1,0 +1,1145 @@
+#-----------------------------Personal Pronoun	NNP (Completed)
+beliau	PRP
+dia	PRP
+dikau	PRP
+engkau	PRP
+ia	PRP
+kalian	PRP
+kami	PRP
+kamu	PRP
+kau	PRP
+kita	PRP
+mereka	PRP
+saya	PRP
+seseorang	PRP
+sesuatu	PRP
+
+#-----------------------------Name of the Day and Month	NNP (Completed)
+Senin	NNP
+Selasa	NNP
+Rabu	NNP
+Kamis	NNP
+Jumat	NNP
+Sabtu	NNP
+Minggu	NNP,NN
+
+Januari	NNP
+Februari	NNP
+Maret	NNP
+April	NNP
+Mei	NNP
+Juni	NNP
+Juli	NNP
+Agustus	NNP
+September	NNP
+Oktober	NNP
+November	NNP
+Desember	NNP
+
+#-----------------------------Name of Country & Continent	NNP
+Asia	NNP
+Eropa	NNP
+Amerika	NNP
+Afrika	NNP
+Oseania	NNP
+Antartika	NNP
+
+Afganistan	NNP
+Republik Islam Afganistan	NNP
+Afrika Selatan	NNP
+Republik Afrika Selatan	NNP
+Afrika Tengah	NNP
+Republik Afrika Tengah	NNP
+Albania	NNP
+Republik Albania	NNP
+Aljazair	NNP
+Amerika Serikat	NNP
+Andorra	NNP
+Kepangeranan Andorra	NNP
+Angola	NNP
+Republik Angola	NNP
+Antigua dan Barbuda	NNP
+Arab Saudi	NNP
+Kerajaan Arab Saudi	NNP
+Argentina	NNP
+Republik Argentina	NNP
+Armenia	NNP
+Republik Armenia	NNP
+Australia	NNP
+Persemakmuran Australia	NNP
+Austria	NNP
+Republik Austria	NNP
+Azerbaijan	NNP
+Republik Azerbaijan	NNP
+Bahama	NNP
+Persemakmuran Bahama	NNP
+Bahrain	NNP
+Kerajaan Bahrain	NNP
+Bangladesh	NNP
+Republik Rakyat Bangladesh	NNP
+Barbados	NNP
+Belanda	NNP
+Kerajaan Belanda	NNP
+Belarus	NNP
+Republik Belarus 		NNP
+Belgia	NNP
+Kerajaan Belgia 		NNP
+Belize	NNP
+Benin	NNP
+Republik Benin	NNP
+Bhutan	NNP
+Kerajaan Bhutan	NNP
+Bolivia	NNP
+Republik Bolivia	NNP
+Bosnia dan Herzegovina	NNP
+Botswana	NNP
+Republik Botswana 		NNP
+Brasil	NNP
+Republik Federal Brasil	NNP
+Inggris	NNP
+Britania Raya	NNP
+Kerajaan Bersatu Britania Raya dan Irlandia Utara 		NNP
+Brunei	NNP
+Negara Brunei Darussalam	NNP
+Bulgaria	NNP
+Republik Bulgaria	NNP
+Burkina Faso	NNP
+Burma	NNP
+Burundi	NNP
+Republik Burundi	NNP
+Ceko	NNP
+Republik Ceko	NNP
+Chad	NNP
+Republik Chad 		NNP
+Chili	NNP
+Republik Chili	NNP
+Cina	NNP
+Republik Rakyat Cina	NNP
+Côte d'Ivoire	NNP
+Denmark	NNP
+Kerajaan Denmark	NNP
+Djibouti	NNP
+Republik Djibouti 		NNP
+Dominika	NNP
+Persemakmuran Dominika	NNP
+Dominika	NNP
+Republik Dominika	NNP
+Ekuador	NNP
+Republik Ekuador	NNP
+El Salvador	NNP
+Republik El Salvador	NNP
+Eritrea	NNP
+Negara Eritrea	NNP
+Estonia	NNP
+Republik Estonia	NNP
+Ethiopia	NNP
+Republik Demokratik Federal Ethiopia	NNP
+Fiji	NNP
+Republik Kepulauan Fiji 		NNP
+Filipina	NNP
+Republik Filipina	NNP
+Finlandia	NNP
+Republik Finlandia 		NNP
+Gabon	NNP
+Republik Gabon	NNP
+Gambia	NNP
+Republik Gambia	NNP
+Jalur Gaza	NNP
+Georgia		NNP
+Ghana	NNP
+Republik Ghana	NNP
+Grenada	NNP
+Guatemala	NNP
+Republik Guatemala	NNP
+Guinea	NNP
+Republik Guinea	NNP
+Guinea Khatulistiwa	NNP
+Republik Guinea Khatulistiwa	NNP
+Guinea-Bissau	NNP
+Republik Guinea Bissau	NNP
+Guyana	NNP
+Republik Kooperatif Guyana	NNP
+Haiti	NNP
+Republik Haiti	NNP
+Honduras	NNP
+Republik Honduras	NNP
+Hongaria	NNP
+Republik Hongaria	NNP
+India	NNP
+Republik India	NNP
+Indonesia	NNP
+Republik Indonesia	NNP
+Irak	NNP
+Republik Irak	NNP
+Iran	NNP
+Republik Islam Iran	NNP
+Irlandia	NNP
+Republik Irlandia	NNP
+Islandia	NNP
+Republik Islandia	NNP
+Israel	NNP
+Negara Israel	NNP
+Italia	NNP
+Republik Italia	NNP
+Jamaika	NNP
+Jepang	NNP
+Jerman	NNP
+Republik Federal Jerman	NNP
+Kamboja	NNP
+Kerajaan Kamboja	NNP
+Kamerun	NNP
+Republik Kamerun	NNP
+Kanada	NNP
+Kazakhstan	NNP
+Republik Kazakhstan	NNP
+Kenya	NNP
+Republik Kenya	NNP
+Kirgizstan	NNP
+Republik Kirgizstan	NNP
+Kiribati	NNP
+Republik Kiribati	NNP
+Kolombia	NNP
+Republik Kolombia	NNP
+Komoro	NNP
+Perserikatan Komoro	NNP
+Kongo	NNP
+Republik Demokratik Kongo	NNP
+Kongo	NNP
+Republik Kongo	NNP
+Korea	NNP
+Korea Selatan	NNP
+Republik Korea	NNP
+Korea Utara	NNP
+Republik Rakyat Demokratik Korea	NNP
+Kosta Rika	NNP
+Republik Kosta Rika	NNP
+Kroasia	NNP
+Republik Kroasia	NNP
+Kuba	NNP
+Republik Kuba	NNP
+Kuwait	NNP
+Negara Kuwait	NNP
+Laos	NNP
+Republik Demokratik Rakyat Laos	NNP
+Latvia	NNP
+Republik Latvia	NNP
+Lebanon	NNP
+Republik Lebanon	NNP
+Lesotho	NNP
+Kerajaan Lesotho	NNP
+Liberia	NNP
+Republik Liberia	NNP
+Libya	NNP
+Jamahiriyah Arab Rakyat Sosialis Agung Libya	NNP
+Liechtenstein	NNP
+Kepangeranan Liechtenstein	NNP
+Lituania	NNP
+Republik Lituania	NNP
+Luksemburg	NNP
+Keadipatian Agung Luksemburg	NNP
+Madagaskar	NNP
+Republik Madagaskar	NNP
+Makedonia	NNP
+Republik Makedonia	NNP
+Maladewa	NNP
+Republik Maladewa	NNP
+Malawi	NNP
+Republik Malawi	NNP
+Malaysia	NNP
+Mali	NNP
+Republik Mali	NNP
+Malta	NNP
+Republik Malta	NNP
+Maroko	NNP
+Kerajaan Maroko	NNP
+Marshall	NNP
+Republik Kepulauan Marshall	NNP
+Mauritania	NNP
+Republik Islam Mauritania	NNP
+Mauritius	NNP
+Republik Mauritius	NNP
+Meksiko	NNP
+Perserikatan Negara-Negara Meksiko	NNP
+Mesir	NNP
+Republik Arab Mesir	NNP
+Mikronesia	NNP
+Federasi Mikronesia	NNP
+Moldova	NNP
+Republik Moldova	NNP
+Republik Moldova Transnistria	NNP
+Monako	NNP
+Kepangeranan Monako	NNP
+Mongolia	NNP
+Montenegro	NNP
+Mozambik	NNP
+Republik Mozambik	NNP
+Myanmar	NNP
+Republik Persatuan Myanmar	NNP
+Namibia	NNP
+Republik Namibia	NNP
+Nauru	NNP
+Republik Nauru	NNP
+Nepal	NNP
+Republik Federal Demokratik Nepal	NNP
+Niger	NNP
+Republik Niger	NNP
+Nigeria	NNP
+Republik Federal Nigeria	NNP
+Nikaragua	NNP
+Republik Nikaragua	NNP
+Norwegia	NNP
+Kerajaan Norwegia	NNP
+Oman	NNP
+Kesultanan Oman	NNP
+Pakistan	NNP
+Republik Islam Pakistan	NNP
+Palau	NNP
+Republik Palau	NNP
+Panama	NNP
+Republik Panama	NNP
+Pantai Gading	NNP
+Republik Pantai Gading	NNP
+Papua Nugini	NNP
+Negara Independen Papua Nugini	NNP
+Paraguay	NNP
+Republik Paraguay	NNP
+Perancis	NNP
+Republik Perancis	NNP
+Peru	NNP
+Republik Peru	NNP
+Polandia	NNP
+Republik Polandia	NNP
+Portugal	NNP
+Republik Portugal	NNP
+Qatar	NNP
+Negara Qatar	NNP
+Republik Rakyat Cina	NNP
+Rumania	NNP
+Rusia	NNP
+Federasi Rusia	NNP
+Rwanda	NNP
+Republik Rwanda	NNP
+Saint Kitts dan Nevis	NNP
+Federasi Saint Kitts dan Nevis	NNP
+Saint Lucia	NNP
+Saint Vincent dan Grenadines	NNP
+Samoa	NNP
+Negara Independen Samoa	NNP
+San Marino	NNP
+Republik Serene San Marino	NNP
+Sao Tome dan Principe	NNP
+Republik Demokratik Sao Tome dan Principe	NNP
+Selandia Baru	NNP
+Senegal	NNP
+Republik Senegal	NNP
+Serbia	NNP
+Republik Serbia	NNP
+Seychelles	NNP
+Republik Seychelles	NNP
+Sierra Leone	NNP
+Republik Sierra Leone	NNP
+Singapura	NNP
+Republik Singapura	NNP
+Siprus	NNP
+Republik Siprus	NNP
+Slovenia	NNP
+Republik Slovenia	NNP
+Slowakia	NNP
+Republik Slowakia	NNP
+Solomon	NNP
+Kepulauan Solomon	NNP
+Somalia	NNP
+Republik Somalia	NNP
+Spanyol	NNP
+Kerajaan Spanyol	NNP
+Sri Lanka	NNP
+Republik Sosialis Demokratik Sri Lanka	NNP
+Sudan	NNP
+Republik Sudan	NNP
+Sudan Selatan	NNP
+Republik Sudan Selatan	NNP
+Suriah	NNP
+Republik Arab Suriah	NNP
+Suriname	NNP
+Republik Suriname	NNP
+Swaziland	NNP
+Kerajaan Swaziland	NNP
+Swedia	NNP
+Kerajaan Swedia	NNP
+Swiss	NNP
+Konfederasi Swiss	NNP
+Tajikistan	NNP
+Republik Tajikistan	NNP
+Tanjung Verde	NNP
+Republik Tanjung Verde	NNP
+Tanzania	NNP
+Republik Persatuan Tanzania	NNP
+Thailand	NNP
+Kerajaan Thailand	NNP
+Timor Leste	NNP
+Republik Demokratik Timor-Leste	NNP
+Republik Rakyat Tiongkok	NNP
+Togo	NNP
+Republik Togo	NNP
+Tonga	NNP
+Kerajaan Tonga	NNP
+Trinidad dan Tobago	NNP
+Republik Trinidad dan Tobago	NNP
+Tunisia	NNP
+Republik Tunisia	NNP
+Turki	NNP
+Republik Turki	NNP
+Turkmenistan	NNP
+Tuvalu	NNP
+Uganda	NNP
+Republik Uganda	NNP
+Ukraina	NNP
+Uni Emirat Arab	NNP
+Uruguay	NNP
+Republik Timur Uruguay	NNP
+Uzbekistan	NNP
+Republik Uzbekistan	NNP
+Vanuatu	NNP
+Republik Vanuatu	NNP
+Vatikan	NNP
+Negara Kota Vatikan	NNP
+Venezuela	NNP
+Republik Bolivar Venezuela	NNP
+Vietnam	NNP
+Republik Sosialis Vietnam	NNP
+Yaman	NNP
+Republik Yaman	NNP
+Yordania	NNP
+Kerajaan Hasyimiyah Yordania	NNP
+Yunani	NNP
+Republik Hellenik	NNP
+Zaire	NNP
+Zambia	NNP
+Republik Zambia	NNP
+Zimbabwe	NNP
+Republik Zimbabwe	NNP
+
+
+#-----------------------------Pecahan CD
+nol	CD
+satu	CD
+dua	CD
+tiga	CD
+empat	CD
+lima	CD
+enam	CD
+tujuh	CD
+delapan	CD
+sembilan	CD
+sepuluh	CD
+sebelas	CD
+seratus	CD
+seribu	CD
+sejuta	CD
+semiliar	CD
+setriliun	CD
+sebiliun	CD
+selusin	CD
+
+belas	CD
+biliun	CD
+juta	CD
+lusin	CD
+miliar	CD
+puluh	CD
+ratus	CD
+ribu	CD
+triliun	CD
+
+belasan	CD
+biliunan	CD
+jutaan	CD
+lusinan	CD
+miliaran	CD
+puluhan	CD
+ratusan	CD
+ribuan	CD
+triliunan	CD
+
+setengah	CD
+
+sepersatu	CD
+seperdua	CD
+sepertiga	CD
+seperempat	CD
+seperlima	CD
+seperenam	CD
+sepertujuh	CD
+seperdelapan	CD
+sepersembilan	CD
+sepersepuluh	CD
+sepersebelas	CD
+seperseratus	CD
+seperseribu	CD
+sepersejuta	CD
+sepersemiliar	CD
+sepersetriliun	CD
+sepersebiliun	CD
+seperselusin	CD
+
+pertama	OD
+kesatu	CD,OD
+kedua	CD,OD
+ketiga	CD,OD
+keempat	CD,OD
+kelima	CD,OD
+keenam	CD,OD
+ketujuh	CD,OD
+kedelapan	CD,OD
+kesembilan	CD,OD
+kesepuluh	CD,OD
+kesebelas	CD,OD
+keseratus	CD,OD
+keseribu	CD,OD
+kesejuta	CD,OD
+kesemiliar	CD,OD
+kesetriliun	CD,OD
+kesebiliun	CD,OD
+keselusin	CD,OD
+
+keduanya	CD
+ketiganya	CD
+keempatnya	CD
+kelimanya	CD
+keenamnya	CD
+ketujuhnya	CD
+kedelapannya	CD
+kesembilannya	CD
+
+kedua-duanya	CD
+ketiga-tiganya	CD
+keempat-empatnya	CD
+kelima-limanya	CD
+keenam-enamnya	CD
+ketujuh-tujuhnya	CD
+kedelapan-delapannya	CD
+kesembilan-sembilannya	CD
+
+dua-duanya	CD
+tiga-tiganya	CD
+empat-empatnya	CD
+lima-limanya	CD
+enam-enamnya	CD
+tujuh-tujuhnya	CD
+delapan-delapannya	CD
+sembilan-sembilannya	CD
+
+seantero	CD
+beberapa	CD
+semua	CD
+seluruh	CD
+
+#-----------------------------Coordinating Conjunction	CC (Completed)
+apalagi	CC
+atau	CC
+ataupun	CC
+dan	CC
+jangankan	CC
+kemudian	CC,NN
+lalu	CC,VB
+namun	CC
+padahal	CC
+sedangkan	CC
+tetapi	CC
+
+#-----------------------------Determiner	DT (Completed)
+para	DT
+sang	DT
+si	DT
+
+#-----------------------------Preposition	IN (Completed)
+kepada	IN
+oleh	IN
+terhadap	IN
+
+#-----------------------------Negation	NEG (Completed)
+belum	NEG
+bukan	NEG
+jangan	NEG
+kagak	NEG
+nggak	NEG
+tak	NEG
+tidak	NEG
+
+#-----------------------------Prefix Currency	NN (Completed)
+afghani	NN
+rand	NN
+lek	NN
+dinar	NN
+dollar	NN
+franc	NN
+peseta	NN
+kwanza	NN
+gulden	NN
+antlilen	NN
+riyal	NN
+rubel	NN
+peso	NN
+florin	NN
+schiling	NN
+taka	NN
+guilder	NN
+ngultrum	NN
+boliviano	NN
+pula	NN,RB
+cruzado	NN
+lev	NN
+koruna	NN
+renminbi	NN
+krone	NN
+sucre	NN
+colon	NN
+birr	NN
+markka	NN
+dalasi	NN
+cedi	NN
+krona	NN
+qutzal	NN
+guyana	NN
+gourde	NN
+lempira	NN
+forint	NN
+rupee	NN
+rupiah	NN
+pound sterling	NN
+rial	NN
+pound	NN
+sheqel	NN
+lira	NN
+yen	NN
+mark	NN
+riel	NN
+shilling	NN
+won	NN
+kip	NN
+loti	NN
+pataca	NN
+rufiyaa	NN
+kwacha	NN
+ringgit	NN
+dirham	NN
+ouguiya	NN
+tugrik	NN
+metical	NN
+kyat	NN
+naira	NN
+cordoba	NN
+balboa	NN
+kna	NN
+guarani	NN
+inti	NN
+zloty	NN
+escudo	NN
+leu	NN
+tala	NN
+dobra	NN
+leone	NN
+tolar	NN
+lilangeni	NN
+pa’anga	NN
+vatu	NN
+bolivar	NN
+dong	NN,UH
+drachma	NN
+zaire	NN
+
+#-----------------------------Nomina Ukuran/Penggolong	NND
+desi	NND
+senti	NND
+mili	NND
+mikro	NND,JJ
+nano	NND
+angstro	NND
+piko	NND
+femto	NND
+atto	NND
+zepto	NND
+yocto	NND
+deka	NND
+hekto	NND
+kilo	NND
+mega	NND,NN
+giga	NND
+tera	NND,NN
+penta	NND
+exa	NND
+zetta	NND
+yotta	NND
+kuintal	NND
+ton	NND
+ons	NND
+meter	NND
+gram	NND
+sekon	NND
+detik	NND
+menit	NND
+jam	NND
+kelvin	NND
+celsius	NND
+ampere	NND
+volt	NND
+watt	NND
+kandela	NND
+mol	NND
+joule	NND
+hektar	NND
+liter	NND
+desibel	NND
+inci	NND
+
+cm	NND
+m	NND
+kg	NND
+s	NND
+km	NND
+km/jam	NND
+m/s	NND
+
+bakul	NN,NND
+batang	NN,NND
+belah	NN,NND,VB
+bentuk	NN,NND
+berkas	NN,NND
+bidang	NN,NND
+biji	NN,NND
+bilah	NN,NND,VB
+bongkah	NN,NND
+botol	NN,NND
+buah	NN,NND
+buku	NN,NND
+bulir	NN,NND
+bungkal	NN,NND
+bungkus	NN,NND
+butir	NN,NND
+caping	NN,NND
+carik	NN,NND,JJ
+cawan	NN,NND
+cekak	NN,NND,VB
+cupak	NN,NND
+depa	NN,NND
+dulang	NN,NND,VB
+ekor	NN,NND
+galah	NN,NND
+gantang	NN,NND
+gelas	NN,NND
+geluk	NN,NND
+genggam	NN,NND
+goni	NN,NND
+guci	NN,NND
+gugus	NN,NND
+gumpal	NN,NND
+hasta	NN,NND
+helai	NN,NND
+ikat	NN,NND
+iris	NN,NND
+jaras	NN,NND
+jengkal	NN,NND
+jenis	NN,NND
+kaki	NN,NND
+kapur	NN,NND
+karung	NN,NND
+kawan	NN,NND
+kecap	NN,NND
+kecup	NN,NND,VB
+kepal	NN,NND
+keping	NN,NND
+kerat	NN,NND
+kuntum	NN,NND
+langkah	NN,NND
+laras	NN,NND,JJ
+lembar	NN,NND
+macam	NN,NND
+onggok	NN,NND
+orang	NN,NND
+papan	NN,NND
+pasang	NN,NND,VB
+pasu	NN,NND
+patah	NND,JJ
+pikul	NN,NND
+piring	NN,NND
+potong	NN,NND,VB
+pucuk	NN,NND
+puntung	NN,NND
+rencengan	NN,NND
+rombongan	NN,NND
+ruas	NN,NND
+rumpun	NN,NND
+sendok	NN,NND
+sikat	NN,NND,VB
+sisir	NN,NND,VB
+suap	NN,NND
+tandan	NN,NND
+tangkai	NN,NND
+tapak	NN,NND
+teguk	NN,NND,VB,JJ
+teras	NN,NND
+tetes	NN,NND
+timbun	NN,NND
+titik	NN,NND
+truk	NN,NND
+tudung	NN,NND
+tumpuk	NN,NND,VB
+tusuk	NN,NND,VB
+unggun	NN,NND
+untai	NN,NND
+utas	NN,NND,JJ
+
+#-----------------------------Modal	MD (Completed)
+harus	MD
+mungkin	MD
+pernah	MD
+sudah	MD
+telah	MD
+
+#-----------------------------Pronoun	PR (Completed)
+anu	PR
+begini	PR
+demikian	PR
+ini	PR
+itu	PR
+sana	PR
+sini	PR
+situ	PR
+
+#-----------------------------Adverb	RB (Completed)
+agak	RB
+agak-agak	RB
+amat	RB
+banget	RB
+benar-benar	RB
+betul-betul	RB
+cuma	RB
+doang	RB
+hampir	RB
+jarang	RB
+juga	RB
+kadang-kadang	RB
+kerap	RB
+makin	RB
+memang	RB
+nyaris	RB
+paling	RB
+paling-paling	RB
+pula	RB
+saja	RB
+saling	RB
+sangat	RB
+segera	RB
+sekadar	RB
+selalu	RB
+semakin	RB
+serba	RB
+sering	RB
+sungguh	RB
+teramat	RB
+terkadang	RB
+
+#-----------------------------Particle	RP (Completed)
+-kah	RP
+-lah	RP
+pun	RP
+
+#-----------------------------Subordinative Conjuction	SC
+apabila	SC
+asalkan	SC
+bahwa	SC
+yaitu	SC
+yakni	SC
+untuk	SC,IN
+
+#-----------------------------Mathematical Symbol	SYM
+$	SYM
+%	SYM
+*	SYM
+/	SYM,Z
+:	SYM,Z
++	SYM
+-	SYM,Z
+=	SYM
+<	SYM
+>	SYM
+
+#-----------------------------Currency Symbol	SYM (Completed)
+AED	SYM
+AFN	SYM
+ALL	SYM
+AMD	SYM
+ANG	SYM
+AOA	SYM
+ARS	SYM
+AUD	SYM
+AWG	SYM
+AZN	SYM
+BAM	SYM
+BBD	SYM
+BDT	SYM
+BGN	SYM
+BHD	SYM
+BIF	SYM
+BMD	SYM
+BND	SYM
+BOB	SYM
+BOV	SYM
+BRL	SYM
+BSD	SYM
+BTN	SYM
+BWP	SYM
+BYR	SYM
+BZD	SYM
+CAD	SYM
+CDF	SYM
+CHE	SYM
+CHF	SYM
+CHW	SYM
+CLF	SYM
+CLP	SYM
+CNY	SYM
+COP	SYM
+COU	SYM
+CRC	SYM
+CUP	SYM
+CVE	SYM
+CYP	SYM
+CZK	SYM
+DJF	SYM
+DKK	SYM
+DOP	SYM
+DZD	SYM
+EEK	SYM
+EGP	SYM
+ERN	SYM
+ETB	SYM
+EUR	SYM
+FJD	SYM
+FKP	SYM
+GBP	SYM
+GEL	SYM
+GHC	SYM
+GIP	SYM
+GMD	SYM
+GNF	SYM
+GTQ	SYM
+GYD	SYM
+HKD	SYM
+HNL	SYM
+HRK	SYM
+HTG	SYM
+HUF	SYM
+IDR	SYM
+ILS	SYM
+INR	SYM
+IQD	SYM
+IRR	SYM
+ISK	SYM
+JMD	SYM
+JOD	SYM
+JPY	SYM
+KES	SYM
+KGS	SYM
+KHR	SYM
+KMF	SYM
+KPW	SYM
+KRW	SYM
+KWD	SYM
+KYD	SYM
+KZT	SYM
+LAK	SYM
+LBP	SYM
+LKR	SYM
+LRD	SYM
+LSL	SYM
+LTL	SYM
+LVL	SYM
+LYD	SYM
+MAD	SYM
+MDL	SYM
+MGA	SYM
+MKD	SYM
+MMK	SYM
+MNT	SYM
+MOP	SYM
+MRO	SYM
+MTL	SYM
+MUR	SYM
+MVR	SYM
+MWK	SYM
+MXN	SYM
+MXV	SYM
+MYR	SYM
+MZN	SYM
+NAD	SYM
+NGN	SYM
+NIO	SYM
+NOK	SYM
+NPR	SYM
+NZD	SYM
+OMR	SYM
+PAB	SYM
+PEN	SYM
+PGK	SYM
+PHP	SYM
+PKR	SYM
+PLN	SYM
+PYG	SYM
+QAR	SYM
+ROL	SYM
+RON	SYM
+RSD	SYM
+RUB	SYM
+RWF	SYM
+SAR	SYM
+SBD	SYM
+SCR	SYM
+SDD	SYM
+SEK	SYM
+SGD	SYM
+SHP	SYM
+SKK	SYM
+SLL	SYM
+SOS	SYM
+SRD	SYM
+STD	SYM
+SYP	SYM
+SZL	SYM
+THB	SYM
+TJS	SYM
+TMM	SYM
+TND	SYM
+TOP	SYM
+TTD	SYM
+TWD	SYM
+TZS	SYM
+UAH	SYM
+UGX	SYM
+USD	SYM
+USN	SYM
+USS	SYM
+UYU	SYM
+UZS	SYM
+VEB	SYM
+VND	SYM
+VUV	SYM
+WST	SYM
+XAF	SYM
+XAG	SYM
+XAU	SYM
+XBA	SYM
+XBB	SYM
+XBC	SYM
+XBD	SYM
+XCD	SYM
+XDR	SYM
+XFO	SYM
+XFU	SYM
+XOF	SYM
+XPD	SYM
+XPF	SYM
+XPT	SYM
+XTS	SYM
+XXX	SYM
+YER	SYM
+ZAR	SYM
+ZMK	SYM
+ZWD	SYM
+
+Rp	SYM
+
+#-----------------------------Question Word	WH
+siapa	WH,SC
+berapa	WH,SC
+apa	WH,SC
+kapan	WH,SC
+kenapa	WH,SC
+mengapa	WH,SC
+di mana	WH,SC
+ke mana	WH,SC
+dari mana	WH,SC
+bilamana	WH,SC
+
+#-----------------------------Copula	VB (Completed)
+adalah	VB
+ialah	VB
+
+#-----------------------------Punctuation	Z (Completed)
+'	Z
+"	Z
+`	Z
+
+!	Z
+.	Z
+?	Z
+
+;	Z
+
+(	Z
+)	Z
+[	Z
+]	Z
+{	Z
+}	Z
+
+,	Z
+
+&	Z
+
+#-----------------------------Others exclusion (Completed)
+sebaliknya	CC
+satu-satunya	JJ
+akhirnya	RB
+mestinya	RB
+sebetulnya	RB
+secepatnya	RB
+sedalam-dalamnya	RB
+seikhlas-ikhlasnya	RB
+sekuat-kuatnya	RB
+selanjutnya	RB
+sememangnya	RB
+semestinya	RB
+setinggi-tingginya	RB
+agaknya	RB
+harusnya	RB
+rasanya	RB
+rupanya	RB
+hendaknya	RB
+kiranya	RB
+biasanya	RB
+layaknya	RB
+seluruhnya	RB
+semuanya	RB
+sebaiknya	RB
+sebenarnya	RB
+sesungguhnya	RB
+sedapatnya	RB
+seharusnya	RB
+secepat-cepatnya	RB
+selambat-lambatnya	RB
+bahwasanya	SC
+makanya	SC
+misalnya	SC
+seandainya	SC
+sebelumnya	SC
+sedatangnya	SC
+sekiranya	SC
+sepulangnya	SC
+sesampainya	SC
+setibanya	SC
+umpamanya	SC
+ataupun	CC
+maupun	CC
+adapun	IN
+betapapun	SC
+biarpun	SC
+kalaupun	SC
+kendatipun	SC
+meskipun	SC
+sekalipun	SC
+sungguhpun	SC
+walaupun	SC
+apa pun	SC
+ke mana pun	SC
+siapa pun	SC
