@@ -9,7 +9,7 @@ if(scalar @ARGV > 0) {
 	}
 }
 
-system("cat outputs/res-" . $fileID . "-1-1untagged.txt | perl morphind/MorphInd.pl -disambiguate=0 >outputs/res-" . $fileID . "-morphind.txt");
+system("cat outputs/res-" . $fileID . "-1-1untagged.txt | perl ../morphind/MorphInd.pl -disambiguate=0 >outputs/res-" . $fileID . "-morphind.txt");
 open(IN,"outputs/res-" . $fileID . "-1-1tag.txt");
 open(UNTAGGED, "outputs/res-" . $fileID . "-1-1untagged.txt");
 open(MORPHIND, "outputs/res-" . $fileID . "-morphind.txt");
