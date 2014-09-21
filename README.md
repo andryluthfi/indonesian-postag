@@ -50,7 +50,7 @@ lalu jalankan perintah ini untuk dapat mengetahui keluarannya
 atau juga dengan menjalakan perintah ini, kami menyiapkan skrip percobaan sebagai demo pada `testing.sh`
 
     $ ./testing.sh
-    
+
 pastikan berkas tersebut executeable.
 
 
@@ -59,4 +59,8 @@ pastikan berkas tersebut executeable.
 
 
 ### Authors
+
+### License
+This work is licensed under the Creative Commons Attribution-NonCommercial-ShareAlike 4.0 International License. To view a copy of this license, visit http://creativecommons.org/licenses/by-nc-sa/4.0/.
+
 
