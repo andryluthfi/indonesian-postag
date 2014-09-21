@@ -38,10 +38,11 @@ sedangkan folder morphind didapatkan dari mengunduh [MorphInd](http://septinalar
 
 ### Menjalankan Program
 silahkan buat file input dalam folder `outputs/` dengan nama `res-[ID file]-input.txt`
-```
+
     $ cd tagger
+
     $ echo "Andry makan nasi di rumah sakit kemarin." > outputs/res-[ID file]-input.txt
-```
+    
 lalu jalankan perintah ini untuk dapat mengetahui keluarannya
 ```
     $ perl NER.pl -f=[ID file]
