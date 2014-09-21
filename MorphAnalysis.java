@@ -89,7 +89,6 @@ public class MorphAnalysis {
 		String code = "";
 		String singleCode = posTag.substring(0,1);
 		String dualCode = posTag.substring(0,2);
-		//System.out.printf("taggs : pt %s , sc %s , dc %s\n", posTag, singleCode, dualCode);
 		if(singleCode.equalsIgnoreCase("A")) {
 			code = "JJ";
 		} else if(singleCode.equalsIgnoreCase("B")) {
