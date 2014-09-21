@@ -11,7 +11,8 @@ tools atau library di bawah ini terpasang pada mesin anda.
 
 
 ### Prasyarat Sistem
-* Sistem Operasi berbasis Unix
+* Sistem Operasi berbasis Unix.
+* Menggunakan Bahasa Pemrograman Perl dan Java (1.6).
 * Terpasang [foma](https://code.google.com/p/foma/). Silahkan unduh pada halaman foma dan pastikan terdaftar pada PATH environment variable.
 * Unduh [MorphInd](http://septinalarasati.com/work/morphind/). Setelah itu pindahkan folder morphind sesuai dengan skeleton direktori yang disebutkan di bawah.
 
