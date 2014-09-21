@@ -33,7 +33,7 @@ while($temp = <MORPHIND>) {
 	print PREMORPHANALYSIS $temp2 . "\t" . $temp . "\n";
 }
 
-system("java MorphAnalysis -f=outputs/res-" . $fileID . "-preMorphAnalysis.txt -o=outputs/res-" . $fileID . "-morphAnalysis.txt");
+system("java -classpath binary MorphAnalysis -f=outputs/res-" . $fileID . "-preMorphAnalysis.txt -o=outputs/res-" . $fileID . "-morphAnalysis.txt");
 open(MORPHANALYSIS, "outputs/res-" . $fileID . "-morphAnalysis.txt");
 
 # Membaca hasil tagging dari MorphInd untuk kata-kata yang belum diberi tag

@@ -9,7 +9,7 @@ if(scalar @ARGV > 0) {
 	}
 }
 
-system("java PrefixTree outputs/res-" . $fileID . "-input.txt > outputs/res-" . $fileID . "-PrefixTree.txt");
+system("java -classpath binary PrefixTree outputs/res-" . $fileID . "-input.txt > outputs/res-" . $fileID . "-PrefixTree.txt");
 open(IN, "outputs/res-" . $fileID . "-PrefixTree.txt") or die "cannot open < outputs/res-" . $fileID . "-PrefixTree: $!";
 print "\n[NER.pl] Document tokenized...\n";
 open(OUT, ">outputs/res-" . $fileID . "-NER.txt");
