@@ -588,6 +588,7 @@ dari	IN
 ke	IN
 pada	IN
 sebagai	IN
+di  IN
 
 akan	IN,MD
 
