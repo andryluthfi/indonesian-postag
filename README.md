@@ -2,8 +2,8 @@ indonesian-postag
 =================
 
 Indonesian Rule-Based Part-of-Speech Tagger
-* [Bahasa](https://github.com/andryluthfi/indonesian-postag#readmemd-versi-bahasa).
-* [English](https://github.com/andryluthfi/indonesian-postag#readmemd-english-version).
+* [Bahasa](#readmemd-versi-bahasa).
+* [English](#readmemd-english-version).
 
 # README.md versi Bahasa
 ## Pemasangan
