@@ -1,0 +1,5 @@
+apa	^apa<w>_W--$
+milik	^milik<v>_VSA$
+tebal	^tebal<a>_ASP$
+berki	^berki<x>_X--$
+sesuatu	^sesuatu<n>_NSD$

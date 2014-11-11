@@ -1,0 +1,22 @@
+2
+Fam	
+sedang	CC,JJ,MD
+membaca	VB
+apakah	
+skripsi	NN
+milik	VB
+nya	PRP
+yang	SC
+tebal	JJ
+nya	PRP
+100	CD
+halaman	NN
+itu	PR
+berkilah	VB
+tentang	VB
+sesuatu	PRP
+sesuatu	NN
+pun	RP
+
+
+

@@ -1,0 +1,5 @@
+apa	
+milik	VB
+tebal	JJ
+berki	
+sesuatu	NN

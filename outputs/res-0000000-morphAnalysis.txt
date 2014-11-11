@@ -1,0 +1,10 @@
+Fam	
+membaca	VB
+apakah	
+skripsi	NN
+miliknya	VB
+tebalnya	JJ
+halaman	NN
+berkilah	VB
+tentang	VB
+sesuatupun	NN

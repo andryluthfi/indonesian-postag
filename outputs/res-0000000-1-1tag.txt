@@ -1,0 +1,16 @@
+Fam
+sedang	CC,JJ,MD
+membaca
+apakah
+skripsi
+miliknya
+yang	SC
+tebalnya
+100	CD
+halaman
+itu	PR
+berkilah
+tentang
+sesuatu	PRP
+sesuatupun
+

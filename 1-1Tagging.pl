@@ -1,5 +1,7 @@
 #!/usr/local/bin/perl
 
+use Storable;
+
 $fileID = "";
 
 if(scalar @ARGV > 0) {
@@ -14,13 +16,14 @@ open(FIXEDREGEX,"resources/1-1 tag regex.txt");
 open(IN,"outputs/res-" . $fileID . "-NER.txt");
 open(OUT, ">outputs/res-" . $fileID . "-1-1tag.txt");
 open(UNTAGGED, ">outputs/res-" . $fileID . "-1-1untagged.txt");
+open(UNTAGGEDPARTICLE, ">outputs/res-" . $fileID . "-1-1untaggedParticle.txt");
 
-use Storable;
 
 %fixedtag = ();
 %fixedtagRegex = ();
 @regex = ();
 %untaggedWords = ();
+%untaggedWordsNYA = ();
 $line = 1;
 
 # Membaca kamus yang berisi kata-kata dengan kemungkinan postag yang telah diketahui
@@ -81,6 +84,35 @@ while($temp = <IN>) {
 					print OUT $temparray[0] . "\n";
 					print UNTAGGED $temparray[0] . "\n";
 					$untaggedWords{$line} = $temparray[0];
+					
+					# Record particle -nya at the end of the token
+					if($temparray[0] =~ /nya$/) {
+						my $stem = $temparray[0];
+						$stem =~ s/nya$//;
+						print UNTAGGEDPARTICLE $stem . "\n";
+						$untaggedWordsNYA{$line} = "nya";
+					}
+					# Record particle -kah at the end of the token
+					elsif($temparray[0] =~ /kah$/) {
+						my $stem = $temparray[0];
+						$stem =~ s/kah$//;
+						print UNTAGGEDPARTICLE $stem . "\n";
+						$untaggedWordsNYA{$line} = "kah";
+					}
+					# Record particle -lah at the end of the token
+					elsif($temparray[0] =~ /lah$/) {
+						my $stem = $temparray[0];
+						$stem =~ s/lah$//;
+						print UNTAGGEDPARTICLE $stem . "\n";
+						$untaggedWordsNYA{$line} = "lah";
+					}
+					# Record particle -pun at the end of the token
+					elsif($temparray[0] =~ /pun$/) {
+						my $stem = $temparray[0];
+						$stem =~ s/pun$//;
+						print UNTAGGEDPARTICLE $stem . "\n";
+						$untaggedWordsNYA{$line} = "pun";
+					}
 				}
 			}
 		}
@@ -90,6 +122,7 @@ while($temp = <IN>) {
 }
 
 store (\%untaggedWords, 'outputs/res-' . $fileID . '-untaggedWords.ptg');
+store (\%untaggedWordsNYA, 'outputs/res-' . $fileID . '-untaggedWordsNYA.ptg');
 
 print "\n[1-1Tagging.pl] Tagged based on 1-1 tag dictionary...\n";
 # Melanjutkan ke proses Dictionary Look-up

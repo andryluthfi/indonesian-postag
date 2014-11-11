@@ -1,0 +1,10 @@
+^fam<x>_X--$
+^meN+baca<v>_VSA$
+^apa<w>_W--+kah<t>_T--$
+^skripsi<n>_NSD$
+^milik<v>_VSA+dia<p>_PS3$
+^tebal<a>_ASP+dia<p>_PS3$
+^halaman<n>_NSD$
+^ber+kilah<n>_VSA$
+^tentang<v>_VSA/tentang<r>_R--$
+^sesuatu<n>_NSD+pun<t>_T--$
