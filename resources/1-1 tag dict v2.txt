@@ -588,7 +588,7 @@ dari	IN
 ke	IN
 pada	IN
 sebagai	IN
-di  IN
+di	IN
 
 akan	IN,MD
 
@@ -979,9 +979,9 @@ tatkala	SC
 walau	SC
 yang	SC
 
-saat SC,NN
+saat	SC,NN
 
-usai SC,VB
+usai	SC,VB
 
 #-----------------------------Mathematical Symbol	SYM
 $	SYM

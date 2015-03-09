@@ -7,4 +7,4 @@ tebalnya	JJ
 halaman	NN
 berkilah	VB
 tentang	VB
-sesuatupun	NN
+kantor	NN

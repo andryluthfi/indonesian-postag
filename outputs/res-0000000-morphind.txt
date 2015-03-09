@@ -7,4 +7,4 @@
 ^halaman<n>_NSD$
 ^ber+kilah<n>_VSA$
 ^tentang<v>_VSA/tentang<r>_R--$
-^sesuatu<n>_NSD+pun<t>_T--$
+^kantor<n>_NSD$

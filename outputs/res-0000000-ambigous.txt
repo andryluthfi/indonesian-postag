@@ -15,8 +15,8 @@ itu	PR
 berkilah	VB
 tentang	VB
 sesuatu	PRP
-sesuatu	NN
-pun	RP
+di	IN
+kantor	NN
 
 
 

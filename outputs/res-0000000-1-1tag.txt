@@ -12,5 +12,6 @@ itu	PR
 berkilah
 tentang
 sesuatu	PRP
-sesuatupun
+di	IN
+kantor
 
