@@ -70,12 +70,14 @@ public class PrefixTree {
                         debug = "-Restart | Compile : " + compile;
                         compiled.add(compile);
                         if (tree.root.expand(rawToken).getKey().booleanValue()) {
-                        	if(currentNode.expand(rawToken).getKey().booleanValue()) {
-	                            currentNode = tree.root;
-	                            phrase = "";
-	                            index--;
-	                            continue;
-	                        }
+                            bestCandidate = null;
+                            // gue gatau ini kenapa gini dulu. bertapa dulu semoga nemu asal muasal ini control flow
+                        	//if(currentNode.expand(rawToken).getKey().booleanValue()) {
+                            currentNode = tree.root;
+                            phrase = "";
+                            index--;
+                            continue;
+	                        //}
                         } else {
                         	compiled.add(rawToken);
                         }
