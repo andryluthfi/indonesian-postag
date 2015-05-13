@@ -1,10 +1,4 @@
 Fam	^fam<x>_X--$
-membaca	^meN+baca<v>_VSA$
-apakah	^apa<w>_W--+kah<t>_T--$
-skripsi	^skripsi<n>_NSD$
-miliknya	^milik<v>_VSA+dia<p>_PS3$
-tebalnya	^tebal<a>_ASP+dia<p>_PS3$
-halaman	^halaman<n>_NSD$
-berkilah	^ber+kilah<n>_VSA$
-tentang	^tentang<v>_VSA/tentang<r>_R--$
-kantor	^kantor<n>_NSD$
+memasak	^meN+masak<v>_VSA/meN+masak<a>_VSA/meN+pasak<n>_VSA$
+nasi	^nasi<n>_NSD$
+makan	^makan<v>_VSA/ma<f>+kan_VSA$

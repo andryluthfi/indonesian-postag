@@ -45,7 +45,7 @@
         <premise output="NN"/>
     </rule>
     <rule id="rule-5" tags="IN/CC">
-        <premise grammar="+1:NN" output="NN"/>
+        <premise grammar="+1:NN" output="IN"/>
         <premise output="CC"/>
     </rule>
     <!-- kemudian -->
@@ -56,7 +56,7 @@
     <!-- lagi -->
     <rule id="rule-7" tags="CC/RB/MD">
         <premise grammar="-1:JJ and +1:JJ" output="CC"/>
-        <premise output="CC"/>
+        <premise output="MD,RB"/>
     </rule>
     <!-- masing-masing -->
     <rule id="rule-8" tags="CD/PRP">
@@ -113,7 +113,15 @@
         <premise grammar="+1=juga" output="PR"/>
         <premise grammar="+1=pula" output="PR"/>
         <premise grammar="+1=pun" output="PR"/>
-        <premise output="NND,VB,NN"/>
+        <premise output="SC,PR,RB"/>
+    </rule>
+    <!-- Subordinative Conjunction/Preposition -->
+    <rule id="rule-16" tags="SC/IN">
+        <premise grammar="+1:VB" output="SC"/>
+        <!-- <premise grammar="+1!:VB and $0=." output="IN"/>
+        <premise grammar="+1!:VB and $0=!" output="IN"/>
+        <premise grammar="+1!:VB and $0=?" output="IN"/> -->
+        <premise output="SC,IN"/>
     </rule>
 
 </rules>

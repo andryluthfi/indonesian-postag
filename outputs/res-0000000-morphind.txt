@@ -1,10 +1,4 @@
 ^fam<x>_X--$
-^meN+baca<v>_VSA$
-^apa<w>_W--+kah<t>_T--$
-^skripsi<n>_NSD$
-^milik<v>_VSA+dia<p>_PS3$
-^tebal<a>_ASP+dia<p>_PS3$
-^halaman<n>_NSD$
-^ber+kilah<n>_VSA$
-^tentang<v>_VSA/tentang<r>_R--$
-^kantor<n>_NSD$
+^meN+masak<v>_VSA/meN+masak<a>_VSA/meN+pasak<n>_VSA$
+^nasi<n>_NSD$
+^makan<v>_VSA/ma<f>+kan_VSA$

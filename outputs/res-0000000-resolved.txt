@@ -1,19 +1,7 @@
 Fam	NNP
 sedang	JJ,CC,MD	JJ,CC,MD	rule-10 
-membaca	VB
-apakah	X
-skripsi	NN
-milik	VB
-nya	PRP
-yang	SC
-tebal	JJ
-nya	PRP
-100	CD
-halaman	NN
-itu	PR
-berkilah	VB
-tentang	VB
-sesuatu	PRP
-di	IN
-kantor	NN
+memasak	VB
+nasi	NN
+untuk	SC	SC,IN	rule-16 
+makan	VB
 

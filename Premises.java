@@ -91,7 +91,7 @@ public class Premises {
                         : (sign.equals("-") ? 
                             (currentIndex - relativePosition)
                             : (sign.equals("$") ? 
-                                ambigousCase.tokens.size() - 1
+                                ambigousCase.tokens.size()  - relativePosition- 1
                                 : 0));
                 
                 // System.out.println("sign : " + sign);
