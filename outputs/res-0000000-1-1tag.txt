@@ -3,5 +3,6 @@ sedang	CC,JJ,MD
 memasak
 nasi
 untuk	SC,IN
-makan
+ibu
+.	Z
 

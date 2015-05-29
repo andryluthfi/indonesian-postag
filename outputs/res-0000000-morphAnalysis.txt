@@ -1,4 +1,4 @@
 Fam	
 memasak	VB
 nasi	NN
-makan	VB
+ibu	NN

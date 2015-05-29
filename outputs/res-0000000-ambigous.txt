@@ -4,7 +4,8 @@ sedang	CC,JJ,MD
 memasak	VB
 nasi	NN
 untuk	SC,IN
-makan	VB
+ibu	NN
+.	Z
 
 
 
