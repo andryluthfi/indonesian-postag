@@ -39,7 +39,7 @@ public class Premises {
     
     public class Premise {
 
-        public static final String MATCH_RELATIVE_LOCATION = "([+\\-\\$\\^])(\\d)([:=])([\\w\\?!\\.,]+)";
+        public static final String MATCH_RELATIVE_LOCATION = "([+\\-\\$\\^])(\\d)([!]{0,1})([:=~])([\\w\\?!\\.,\\$\\^]+)";
 
         public Premises parent;
         public String grammar;
@@ -61,9 +61,14 @@ public class Premises {
             boolean isFirst = true;
             String[] syntaces = this.grammar.split("[aA][nN][dD]");
 
+            System.out.println(this.parent.ID);
             for (String syntax : syntaces) {
+                syntax = syntax.trim();
                 if(syntax.matches(Premises.Premise.MATCH_RELATIVE_LOCATION)) {
+
                     boolean isSolveLocation = this.solveLocation(ambigousCase, syntax);
+                    System.out.println("grammar =  " + syntax + " [result:"+(isSolveLocation ? "true":"false")+"]");
+
                     isTrue = isFirst ? isSolveLocation : isTrue && isSolveLocation;
                     isFirst = false;
                 }
@@ -75,39 +80,53 @@ public class Premises {
         private boolean solveLocation(Case ambigousCase, String syntax) {
             boolean isTrue = false;
             String scan = syntax.trim().replaceAll(" ", "");
-            Pattern neighbor = Pattern.compile(Premises.Premise.MATCH_RELATIVE_LOCATION);
-            Matcher matcher = neighbor.matcher(scan);
+            Pattern patternContext = Pattern.compile(Premises.Premise.MATCH_RELATIVE_LOCATION);
+            Matcher matcherContext = patternContext.matcher(scan);
             // System.out.println("solveLocation");
-            if (matcher.find()) {
-                String sign = matcher.group(1);
-                int relativePosition = Integer.parseInt(matcher.group(2));
-                String assign = matcher.group(3);
-                String tag = matcher.group(4);
+            if (matcherContext.find()) {
+                String sign = matcherContext.group(1);
+                int relativePosition = Integer.parseInt(matcherContext.group(2));
+                String negate = matcherContext.group(3);
+                String assign = matcherContext.group(4);
+                String compareValue = matcherContext.group(5);
 
                 //String[] subContext = context.split(" ");
                 int currentIndex = ambigousCase.getCurrentIndex();
                 int contextPosition = sign.equals("+")
-                        ? (currentIndex + relativePosition)
-                        : (sign.equals("-") ? 
-                            (currentIndex - relativePosition)
-                            : (sign.equals("$") ? 
-                                ambigousCase.tokens.size()  - relativePosition- 1
-                                : 0));
+                ? (currentIndex + relativePosition)
+                : (sign.equals("-") ? 
+                    (currentIndex - relativePosition)
+                    : (sign.equals("$") ? 
+                        ambigousCase.tokens.size()  - relativePosition- 1
+                        : 0 + relativePosition));
                 
                 // System.out.println("sign : " + sign);
                 // System.out.println("cur : " + currentIndex);
                 // System.out.println("con : " + contextPosition);
                 // System.out.println("rel : " + relativePosition);
                 
-                  
+
 
                 boolean isValidContext =  (contextPosition >= 0) && (contextPosition < ambigousCase.tokens.size());
                 if (isValidContext) {
-                    String[] temp = ambigousCase.tokens.get(contextPosition).split("\t");
-                    int index = assign.equals(":") ? 1 : (assign.equals("=") ? 0 : -1);
-                    if(index != -1 && index < temp.length) {
-                        isTrue = temp[index].equalsIgnoreCase(tag);
-                    } 
+                    String[] info = ambigousCase.tokens.get(contextPosition).split("\t");
+                    int access = assign.equals(":") ? 1 : (assign.equals("=") ? 0 : -1);
+                    if(access != -1 && access < info.length) {
+                        isTrue = "!".equals(negate) ? !info[access].equalsIgnoreCase(compareValue) : info[access].equalsIgnoreCase(compareValue);
+                    } else if(assign.equals("~")) {
+                        Pattern patternIndex = Pattern.compile("^([\\$\\^]{0,1})(\\d+)");
+                        Matcher matcherIndex = patternIndex.matcher(compareValue);
+                        if(matcherIndex.find()) {
+                            String signIndex = matcherIndex.group(1);
+                            int relativeIndex = Integer.parseInt(matcherIndex.group(2));
+                            if(signIndex == null || "".equals(signIndex)) {
+                                isTrue = contextPosition == relativeIndex;
+                            } else {
+                                int index = signIndex.equals("$") ? (ambigousCase.tokens.size() - relativeIndex-1) : (0 + relativePosition);
+                                isTrue = contextPosition == index;
+                            }
+                        }
+                    }
                 }
 
             }

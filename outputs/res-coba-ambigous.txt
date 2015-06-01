@@ -1,0 +1,11 @@
+2,5
+Fam	
+sedang	CC,JJ,MD
+memasak	VB
+nasi	NN
+untuk	SC,IN
+ibu	NN
+.	Z
+
+
+
