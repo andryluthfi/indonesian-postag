@@ -38,15 +38,37 @@ Setelah clone repositori ini, pastikan struktur direktori sebagai berikut:
 Folder `tagger` didapatkan dari hasil clone repositori ini sedangkan folder `morphind` didapatkan dari mengunduh [MorphInd](http://septinalarasati.com/work/morphind/).
 
 ### Menjalankan Program
-Silakan buat file input dalam folder `outputs/` dengan nama `res-[ID file]-input.txt`.
+Untuk menjalankan program tagger, silakan memanggil skrip `tag.sh` dari direktori tagger. Skrip ini memiliki beberapa parameter yang perlu diperhatikan.
+	
+	$ ./tag.sh [mode] [input] [verbose]
+
+	mode	:	-file (jika ingin membaca dari suatu berkas)
+				-raw (jika ingin langsung menuliskan teks di command line)
+	input	:	teks atau ID berkas
+	verbose	:	-verbose (jika ingin melihat tahapan proses atau kosongkan saja untuk langsung mengeluarkan hasil akhir)
+
+#### Membaca masukan dari berkas
+Silakan buat berkas masukan dalam folder `outputs/` dengan nama `res-[ID berkas]-input.txt`.
 
     $ cd tagger
-    $ echo "Andry makan nasi di rumah sakit kemarin." > outputs/res-[ID file]-input.txt
+    $ echo "Andry makan nasi di rumah sakit kemarin." > outputs/res-[ID berkas]-input.txt
 
 Lalu jalankan perintah ini untuk dapat mengetahui keluarannya.
 
-    $ perl NER.pl -f=[ID file]
-    $ cat outputs/res-[ID file]-resolved.txt
+    $ ./tag.sh -file [ID berkas] -verbose
+
+Atau perintah ini untuk mengeluarkan hasil akhir saja
+
+	$ ./tag.sh -file [ID berkas]
+
+#### Membaca masukan dari command line
+Untuk membaca masukan langsung dari command line, silakan jalankan perintah ini.
+
+	./tag.sh -raw "Fam sedang memasak nasi untuk makan" -verbose
+
+Atau perintah ini untuk mengeluarkan hasil akhir saja
+
+	./tag.sh -raw "Fam sedang memasak nasi untuk makan"
 
 Anda juga dapat menjalakan skrip percobaan yang kami sediakan pada `testing.sh`. Pastikan berkas tersebut executeable.
 
@@ -87,6 +109,16 @@ You would get `tagger` folder after cloning the repository.
 You should get `morphind` folder by downloading [MorphInd](http://septinalarasati.com/work/morphind/).
 
 ### Running The Program
+You can call the `tag.sh` script to run the tagger from its directory. Please pay attention to the parameters.
+
+	$ ./tag.sh [mode] [input] [verbose]
+
+	mode	:	-file (if you want to read from input file)
+				-raw (if you want to read the input from command line)
+	input	:	text input or file ID
+	verbose	:	-verbose (if you want to debug the process or if you just want to see the result, just leave it blank)
+
+#### Read input from file
 Please create an input file in `outputs/` folder by naming it `res-[ID file]-input.txt`
 
     $ cd tagger
@@ -94,8 +126,20 @@ Please create an input file in `outputs/` folder by naming it `res-[ID file]-inp
 
 Then run the command below to get the result.
 
-    $ perl NER.pl -f=[ID file]
-    $ cat outputs/res-[ID file]-resolved.txt
+     $ ./tag.sh -file [file ID] -verbose
+
+Or this command to get straight to the result.
+
+	$ ./tag.sh -file [file ID]
+
+#### Read input from command line
+In order to read the input straight from the command line, please run the command below.
+
+	./tag.sh -raw "Fam sedang memasak nasi untuk makan" -verbose
+
+Or this command to get straight to the result.
+
+	./tag.sh -raw "Fam sedang memasak nasi untuk makan"
 
 You also can run a simple testing script we provided in `testing.sh`. Please make sure this file is executeable.
 
