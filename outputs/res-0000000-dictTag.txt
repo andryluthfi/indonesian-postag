@@ -1,8 +1,4 @@
-Fam	
-sedang	CC,JJ,MD
-memasak	VB
+saya	PRP
+makan	VB
 nasi	NN
-untuk	SC,IN
-ibu	NN
-.	Z
 

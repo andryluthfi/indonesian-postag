@@ -1,8 +1,4 @@
-Fam	NNP
-sedang	JJ,CC,MD	JJ,CC,MD	rule-10 
-memasak	VB
+saya	PRP
+makan	VB
 nasi	NN
-untuk	SC,IN	SC,IN	rule-16 
-ibu	NN
-.	Z
 

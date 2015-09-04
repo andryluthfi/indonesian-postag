@@ -1,17 +1,25 @@
 #!/usr/local/bin/perl
 
+no warnings 'deprecated';
+
 $fileID = "";
+$verbose = 0;
 
 if(scalar @ARGV > 0) {
 	if($ARGV[0] =~ /^-f=/) {
 		@temparray = split(/=/, $ARGV[0]);
 		$fileID = @temparray[1];
 	}
+    if($ARGV[1] =~ /^-verbose/) {
+        $verbose = 1;
+    }
 }
 
 system("java -classpath binary PrefixTree outputs/res-" . $fileID . "-input.txt > outputs/res-" . $fileID . "-PrefixTree.txt");
 open(IN, "outputs/res-" . $fileID . "-PrefixTree.txt") or die "cannot open < outputs/res-" . $fileID . "-PrefixTree: $!";
-print "\n[NER.pl] Document tokenized...\n";
+if($verbose == 1) {
+    print "\n[NER.pl] Document tokenized...";
+}
 open(OUT, ">outputs/res-" . $fileID . "-NER.txt");
 
 $isPush = 0;
@@ -88,12 +96,18 @@ if($isPush == 0) {
     $isPush++;
     goto PUSH;
 }
-
-print "\n[NER.pl] Name Entity recognized...\n";
+if($verbose == 1) {
+    print "\n[NER.pl] Name Entity recognized...";
+}
 # Melanjutkan ke proses 1-1 Tagging menggunakan kamus
 if($fileID eq "") {
 	system("perl 1-1Tagging.pl");
 }
 else {
-	system("perl 1-1Tagging.pl -f=" . $fileID);
+	if($verbose == 1) {
+        system("perl 1-1Tagging.pl -f=" . $fileID . " -verbose");
+    }
+    else {
+        system("perl 1-1Tagging.pl -f=" . $fileID);
+    }
 }

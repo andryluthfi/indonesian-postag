@@ -1,12 +1,16 @@
 #!/usr/local/bin/perl
 
 $fileID = "";
+$verbose = 0;
 
 if(scalar @ARGV > 0) {
 	if($ARGV[0] =~ /^-f=/) {
 		@temparray = split(/=/, $ARGV[0]);
 		$fileID = @temparray[1];
 	}
+	if($ARGV[1] =~ /^-verbose/) {
+        $verbose = 1;
+    }
 }
 
 system("cat outputs/res-" . $fileID . "-1-1untagged.txt | perl ../morphind/MorphInd.pl -disambiguate=0 >outputs/res-" . $fileID . "-morphind.txt");
@@ -106,11 +110,18 @@ while(my $temp = <IN>) {
 	$line++;
 }
 
-print "\n[DictLookup.pl] Tagged based on KBBI/MorphInd...\n";
+if($verbose == 1) {
+	print "\n[DictLookup.pl] Tagged based on KBBI/MorphInd...";
+}
 # Melanjutkan ke proses rule-based tagging
 if($fileID eq "") {
 	system("perl Rule-BasedTagging.pl");
 }
 else {
-	system("perl Rule-BasedTagging.pl -f=" . $fileID);
+	if($verbose == 1) {
+		system("perl Rule-BasedTagging.pl -f=" . $fileID . " -verbose");
+	}
+	else{
+		system("perl Rule-BasedTagging.pl -f=" . $fileID);
+	}
 }

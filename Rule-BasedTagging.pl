@@ -1,11 +1,17 @@
 #!/usr/local/bin/perl
 
+no warnings 'deprecated';
+
 $fileID = "";
+$verbose = 0;
 
 if(scalar @ARGV > 0) {
     if($ARGV[0] =~ /^-f=/) {
         @temparray = split(/=/, $ARGV[0]);
         $fileID = @temparray[1];
+    }
+    if($ARGV[1] =~ /^-verbose/) {
+        $verbose = 1;
     }
 }
 
@@ -69,12 +75,19 @@ if($isPush == 0) {
 
 store (\@ambigousWord, 'outputs/res-' . $fileID . '-ambigousWord.ptg');
 
-print "\n[Rule-BasedTagging.pl] Ambigous words collected...\n";
+if($verbose == 1) {
+    print "\n[Rule-BasedTagging.pl] Ambigous words collected...";
+}
 system("java -classpath binary ParseRule --inputname=outputs/res-" . $fileID . "-ambigous.txt --trace=true --outputname=outputs/res-" . $fileID . "-parserule.txt");
 # Melanjutkan ke proses unknown/fw resolve
 if($fileID eq "") {
     system("perl Resolver.pl");
 }
 else {
-    system("perl Resolver.pl -f=" . $fileID);
+    if($verbose == 1) {
+        system("perl Resolver.pl -f=" . $fileID . " -verbose");
+    }
+    else {
+        system("perl Resolver.pl -f=" . $fileID);
+    }
 }

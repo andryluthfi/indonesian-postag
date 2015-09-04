@@ -1,4 +1,2 @@
-Fam	
-memasak	VB
+makan	VB
 nasi	NN
-ibu	NN

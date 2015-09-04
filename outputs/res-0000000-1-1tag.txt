@@ -1,8 +1,4 @@
-Fam
-sedang	CC,JJ,MD
-memasak
+saya	PRP
+makan
 nasi
-untuk	SC,IN
-ibu
-.	Z
 

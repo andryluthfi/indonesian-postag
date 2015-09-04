@@ -1,4 +1,2 @@
-^fam<x>_X--$
-^meN+masak<v>_VSA/meN+masak<a>_VSA/meN+pasak<n>_VSA$
+^makan<v>_VSA/ma<f>+kan_VSA$
 ^nasi<n>_NSD$
-^ibu<n>_NSD$

@@ -1,12 +1,16 @@
 #!/usr/local/bin/perl
 
 $fileID = "";
+$verbose = 0;
 
 if(scalar @ARGV > 0) {
 	if($ARGV[0] =~ /^-f=/) {
 		@temparray = split(/=/, $ARGV[0]);
 		$fileID = @temparray[1];
 	}
+	if($ARGV[1] =~ /^-verbose/) {
+        $verbose = 1;
+    }
 }
 
 open(IN,"outputs/res-" . $fileID . "-dictTag.txt");
@@ -74,4 +78,6 @@ while($temp = <IN>) {
 }
 
 # Proses resolve selesai (hasil final tagging)
-print "\n[Resolver.pl] Resolved...\n";
+if($verbose == 1) {
+	print "\n[Resolver.pl] Resolved...\n";
+}

@@ -3,12 +3,16 @@
 use Storable;
 
 $fileID = "";
+$verbose = 0;
 
 if(scalar @ARGV > 0) {
 	if($ARGV[0] =~ /^-f=/) {
 		@temparray = split(/=/, $ARGV[0]);
 		$fileID = @temparray[1];
 	}
+	if($ARGV[1] =~ /^-verbose/) {
+        $verbose = 1;
+    }
 }
 
 open(FIXED,"resources/1-1 tag dict v2.txt");
@@ -124,12 +128,19 @@ while($temp = <IN>) {
 store (\%untaggedWords, 'outputs/res-' . $fileID . '-untaggedWords.ptg');
 store (\%untaggedWordsNYA, 'outputs/res-' . $fileID . '-untaggedWordsNYA.ptg');
 
-print "\n[1-1Tagging.pl] Tagged based on 1-1 tag dictionary...\n";
+if($verbose == 1) {
+	print "\n[1-1Tagging.pl] Tagged based on 1-1 tag dictionary...";
+}
 # Melanjutkan ke proses Dictionary Look-up
 # (Mengirim file res-1-1untagged.txt ke Dictionary Lookup app)
 if($fileID eq "") {
 	system("perl DictLookup.pl");
 }
 else {
-	system("perl DictLookup.pl -f=" . $fileID);
+	if($verbose == 1) {
+		system("perl DictLookup.pl -f=" . $fileID . " -verbose");
+	}
+	else {
+		system("perl DictLookup.pl -f=" . $fileID);
+	}
 }
