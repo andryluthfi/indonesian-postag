@@ -1,6 +1,6 @@
 
-saya	PRP
-makan	VB
+saya	PRP,VB
+makan	VB,CC
 nasi	NN
 
 

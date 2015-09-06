@@ -44,14 +44,14 @@ public class ParseRule {
         isTrace = configurations.containsKey("trace") ? configurations.get("trace").equalsIgnoreCase("true") : false;
         isVerbose = configurations.containsKey("verbose") ? true : false;
         isDetail = isVerbose ? configurations.get("verbose").equalsIgnoreCase("detail") : false;
-        //System.out.println("Memulai...");
+        logConsole("Memulai...");
         if(inputName != null) {
             Rules rules = ParseRule.parseRules(fileName);
             File fileInput = new File(inputName);
             File fileOutput = new File(outputName);
-             //System.out.print("Membaca Berkas... " + inputName);
+             logConsole("Membaca Berkas... " + inputName);
             if(fileInput.exists()) {
-                 //System.out.printf("Berkas Terbaca ... [%s]\n", inputName);
+                logConsole(String.format("Berkas Terbaca ... [%s]\n", inputName));
                 BufferedReader reader = new BufferedReader(new FileReader(fileInput));
                 BufferedWriter  writer = new BufferedWriter (new FileWriter(fileOutput));
                 String line = null;
@@ -66,7 +66,7 @@ public class ParseRule {
                     }
                 }
 
-                    writer.newLine();
+                writer.newLine();
                 for(Case ambigousCase : cases) {
                     int lastTotalUnresolved = 0;
                     while(lastTotalUnresolved != ambigousCase.getTotalUnresolved()) {
