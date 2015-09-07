@@ -1,2 +1,4 @@
-makan	^makan<v>_VSA/ma<f>+kan_VSA$
+Fam	^fam<x>_X--$
+memasak	^meN+masak<v>_VSA/meN+masak<a>_VSA/meN+pasak<n>_VSA$
 nasi	^nasi<n>_NSD$
+makan	^makan<v>_VSA/ma<f>+kan_VSA$

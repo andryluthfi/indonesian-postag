@@ -1,4 +1,7 @@
-saya	PRP
-makan	VB
+Fam	
+sedang	CC,JJ,MD
+memasak	VB
 nasi	NN
+untuk	SC,IN
+makan	VB
 

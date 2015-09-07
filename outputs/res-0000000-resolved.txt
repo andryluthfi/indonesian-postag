@@ -1,4 +1,7 @@
-saya	PRP
-makan	VB
+Fam	NNP
+sedang	JJ,CC,MD	JJ,CC,MD	rule-10 
+memasak	VB
 nasi	NN
+untuk	SC	SC,IN	rule-16 
+makan	VB
 
