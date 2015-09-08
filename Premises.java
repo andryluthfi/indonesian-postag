@@ -60,15 +60,11 @@ public class Premises {
             boolean isTrue = false;
             boolean isFirst = true;
             String[] syntaces = this.grammar.split("[aA][nN][dD]");
-
-            System.out.println(this.parent.ID);
             for (String syntax : syntaces) {
                 syntax = syntax.trim();
                 if(syntax.matches(Premises.Premise.MATCH_RELATIVE_LOCATION)) {
-
                     boolean isSolveLocation = this.solveLocation(ambigousCase, syntax);
-                    System.out.println("grammar =  " + syntax + " [result:"+(isSolveLocation ? "true":"false")+"]");
-
+                  
                     isTrue = isFirst ? isSolveLocation : isTrue && isSolveLocation;
                     isFirst = false;
                 }
