@@ -1,7 +1,7 @@
 Fam	NNP
-sedang	JJ,CC,MD	JJ,CC,MD	rule-10 
+sedang	JJ,CC,MD 
 memasak	VB
 nasi	NN
-untuk	SC	SC,IN	rule-16 
+untuk	SC 
 makan	VB
 

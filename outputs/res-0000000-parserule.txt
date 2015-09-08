@@ -1,3 +1,3 @@
 
-sedang	JJ,CC,MD	JJ,CC,MD	rule-10 
-untuk	SC	SC,IN	rule-16 
+sedang	JJ,CC,MD 
+untuk	SC 

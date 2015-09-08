@@ -76,9 +76,13 @@ if($isPush == 0) {
 store (\@ambigousWord, 'outputs/res-' . $fileID . '-ambigousWord.ptg');
 
 if($verbose == 1) {
+    system("java -classpath binary ParseRule --inputname=outputs/res-" . $fileID . "-ambigous.txt --outputname=outputs/res-" . $fileID . "-parserule.txt --verbose=true");
     print "\n[Rule-BasedTagging.pl] Ambigous words collected...";
 }
-system("java -classpath binary ParseRule --inputname=outputs/res-" . $fileID . "-ambigous.txt --trace=true --outputname=outputs/res-" . $fileID . "-parserule.txt");
+else {
+    system("java -classpath binary ParseRule --inputname=outputs/res-" . $fileID . "-ambigous.txt --outputname=outputs/res-" . $fileID . "-parserule.txt");
+}
+
 # Melanjutkan ke proses unknown/fw resolve
 if($fileID eq "") {
     system("perl Resolver.pl");

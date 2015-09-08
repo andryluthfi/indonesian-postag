@@ -58,11 +58,20 @@ while($temp = <MORPHINDPARTICLE>) {
 	print PREMORPHANALYSISPARTICLE $temp2 . "\t" . $temp . "\n";
 }
 
-system("java -classpath binary MorphAnalysis -f=outputs/res-" . $fileID . "-preMorphAnalysis.txt -o=outputs/res-" . $fileID . "-morphAnalysis.txt");
-open(MORPHANALYSIS, "outputs/res-" . $fileID . "-morphAnalysis.txt");
+if($verbose == 1) {
+	system("java -classpath binary MorphAnalysis -f=outputs/res-" . $fileID . "-preMorphAnalysis.txt -o=outputs/res-" . $fileID . "-morphAnalysis.txt -verbose");
+	open(MORPHANALYSIS, "outputs/res-" . $fileID . "-morphAnalysis.txt");
 
-system("java -classpath binary MorphAnalysis -f=outputs/res-" . $fileID . "-preMorphAnalysisParticle.txt -o=outputs/res-" . $fileID . "-morphAnalysisParticle.txt");
-open(MORPHANALYSISPARTICLE, "outputs/res-" . $fileID . "-morphAnalysisParticle.txt");
+	system("java -classpath binary MorphAnalysis -f=outputs/res-" . $fileID . "-preMorphAnalysisParticle.txt -o=outputs/res-" . $fileID . "-morphAnalysisParticle.txt -verbose");
+	open(MORPHANALYSISPARTICLE, "outputs/res-" . $fileID . "-morphAnalysisParticle.txt");
+}
+else {
+	system("java -classpath binary MorphAnalysis -f=outputs/res-" . $fileID . "-preMorphAnalysis.txt -o=outputs/res-" . $fileID . "-morphAnalysis.txt");
+	open(MORPHANALYSIS, "outputs/res-" . $fileID . "-morphAnalysis.txt");
+
+	system("java -classpath binary MorphAnalysis -f=outputs/res-" . $fileID . "-preMorphAnalysisParticle.txt -o=outputs/res-" . $fileID . "-morphAnalysisParticle.txt");
+	open(MORPHANALYSISPARTICLE, "outputs/res-" . $fileID . "-morphAnalysisParticle.txt");
+}
 
 # Membaca hasil tagging dari MorphInd untuk kata-kata yang belum diberi tag
 while(my $temp = <MORPHANALYSIS>) {
