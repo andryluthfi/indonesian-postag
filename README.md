@@ -16,7 +16,7 @@ Untuk menggunakan Rule-Based POS Tagger Bahasa Indonesia anda harus memastikan t
 * Perl
 * Java (1.6)
 * [foma](https://code.google.com/p/foma/). Silakan unduh dan pastikan terdaftar pada PATH environment variable.
-* [MorphInd](http://septinalarasati.com/work/morphind/). Silakan unduh dan pindahkan ke folder morphind sesuai dengan petunjuk direktori di bawah.
+* [MorphInd](http://septinalarasati.com/work/morphind/). Silakan unduh dan pindahkan ke folder morphind sesuai dengan petunjuk direktori di bawah. Harap gunakan versi yang sudah menyediakan parameter 'disambiguate'.
 
 ### Skeleton Direktori
 Setelah clone repositori ini, pastikan struktur direktori sebagai berikut:
@@ -86,7 +86,7 @@ In order to use Indonesian Rule-Based POS Tagger, you need to make sure your Ope
 * Perl 
 * Java (1.6)
 * [foma](https://code.google.com/p/foma/). Please make sure foma was registered in your PATH environment variable.
-* [MorphInd](http://septinalarasati.com/work/morphind/). Please make sure to put it in morphind folder.
+* [MorphInd](http://septinalarasati.com/work/morphind/). Please make sure to put it in morphind folder. Use the version which allowed 'disambiguate' parameter.
 
 ### Directory Skeleton
 After you clone the repository, the directory structure should look like this:
